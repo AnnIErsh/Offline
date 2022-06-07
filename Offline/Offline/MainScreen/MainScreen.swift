@@ -13,10 +13,13 @@ struct MainScreen: View {
     var body: some View {
         VStack {
             Button("Load News") {
+                model.clealData()
                 model.fetchRequest()
             }
             List {
-                
+                ForEach(model.saved?.articles ?? []) { i in
+                    Text("\(i.title)")
+                }
             }
         }
         .padding()

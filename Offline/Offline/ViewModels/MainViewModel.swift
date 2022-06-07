@@ -10,6 +10,7 @@ import Foundation
 final class MainViewModel: ObservableObject {
     @Injected var network: NetworkService?
     @Injected var data: DataService?
+    @Published var saved: NewsList?
     let path: String = "everything?q=tesla"
     
     var url: URL {
@@ -21,36 +22,19 @@ final class MainViewModel: ObservableObject {
             network?.request(type: NewsList.self, url: url, completion: { result in
                 switch result {
                 case .success(let data):
-                    print(data as Any)
+                    DispatchQueue.main.async {
+                        self.saved = data
+                    }
                 case .failure(let error):
-                    print("some error after parsing: ", error.localizedDescription)
-                    return
+                    DispatchQueue.main.async {
+                        print("some error after parsing: ", error.localizedDescription)
+                    }
                 }
             })
         }
-        data?.saveData()
+    }
+    
+    func clealData() {
+        saved = nil
     }
 }
-
-
-//func fetchRequest() {
-//    DispatchQueue.global(qos: .utility).async { [self] in
-//        network?.request(type: NewsList.self, url: url, completion: { result in
-//            print("result: ", result)
-//            switch result {
-//            case .success(let data):
-//                self.parsed?.parseJson(data: data, completion: { (res: NewsList?) in
-//                    //
-//                })
-//            case .failure(let error):
-//                print("some error after parsing: ", error.localizedDescription)
-//                return
-//            }
-//            DispatchQueue.main.async {
-//                let parsedresult = self.parsed?.saved
-//                print("parsed results: ", parsedresult as Any)
-//            }
-//        })
-//    }
-//    data?.saveData()
-//}

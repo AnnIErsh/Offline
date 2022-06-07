@@ -8,6 +8,8 @@
 import Foundation
 
 class DataService {
+    var saved: Any?
+    
     func saveData() {
         print("save data")
     }

@@ -7,7 +7,10 @@
 
 import Foundation
 
-struct NewsItem: Codable {
+struct NewsItem: Codable, Identifiable {
+    var id: String {
+        return title
+    }
     let title: String
     let author: String?
     let publishedAt: String
