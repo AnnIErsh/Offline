@@ -12,7 +12,6 @@ class Configurator {
     
     func register() {
         ServiceLocator.shared.addServices(service: NetworkService())
-        ServiceLocator.shared.addServices(service: ParseJsonService())
         ServiceLocator.shared.addServices(service: DataService())
     }
 }

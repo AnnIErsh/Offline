@@ -22,11 +22,13 @@ struct NewsItem: Codable {
 }
 
 struct NewsList: Codable {
+    
     let articles: [NewsItem]
     
     enum CodingKeys: String, CodingKey {
         case articles
     }
 }
+
 
 

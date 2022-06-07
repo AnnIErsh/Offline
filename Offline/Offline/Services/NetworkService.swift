@@ -8,23 +8,33 @@
 import Foundation
 
 protocol INetworkService {
-    func request<T: Codable>(type: T.Type, url: URL, completion: @escaping (Result<T, Error>) -> ())
+    func request<T: Codable>(type: T.Type, url: URL, completion: @escaping (Result<T?, Error>) -> Void)
 }
 
 class NetworkService: INetworkService {
+    var configuration = NetworkConfiguration()
+    let decoder = JSONDecoder()
 
-    lazy var urlSession: URLSession = {
+    private lazy var urlSession: URLSession = {
         return URLSession.shared
     }()
     
-    func request<T>(type: T.Type, url: URL, completion: @escaping (Result<T, Error>) -> ()) where T: Decodable, T: Encodable {
+    func request<T: Codable>(type: T.Type, url: URL, completion: @escaping (Result<T?, Error>) -> Void) {
         print("do your request")
-        let request = URLRequest(url: url)
-        let task = urlSession.dataTask(with: request) { data, _ , error in
-            let res: Result<T, Error>
-            if error != nil { res = .failure(error!) }
-            else { res = .success(data as! T) }
-            completion(res)
+        var request = URLRequest(url: url)
+        let headers = configuration.getHeaders()
+        for header in headers {
+            request.addValue(header.value, forHTTPHeaderField: header.key)
+        }
+        let task = urlSession.dataTask(with: request) { [weak self] data, _, error in
+            if let error = error { completion(.failure(error)) }
+            else {
+                if let data = data {
+                    if let content = try? self?.decoder.decode(T.self, from: data) {
+                        completion(.success(content))
+                    }
+                }
+            }
         }
         task.resume()
     }

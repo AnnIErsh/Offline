@@ -7,14 +7,9 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @ObservedObject var model = MainViewModel()
-    
+struct ContentView: View {    
     var body: some View {
-        Text("Hello, world!")
+        MainScreen()
             .padding()
-            .onAppear {
-                self.model.doSomething()
-            }
     }
 }

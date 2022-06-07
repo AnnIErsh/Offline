@@ -17,7 +17,6 @@
 		E7E22B25284E84820019868C /* InjectedWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E22B24284E84820019868C /* InjectedWrapper.swift */; };
 		E7E22B28284E85F00019868C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E22B27284E85F00019868C /* NetworkService.swift */; };
 		E7E22B2A284E86330019868C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E22B29284E86330019868C /* DataService.swift */; };
-		E7E22B2C284E86530019868C /* ParseJsonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E22B2B284E86530019868C /* ParseJsonService.swift */; };
 		E7E22B2E284E86760019868C /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E22B2D284E86760019868C /* Configurator.swift */; };
 		E7E22B31284E8A0A0019868C /* Url+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E22B30284E8A0A0019868C /* Url+Ext.swift */; };
 		E7E22B33284E98B10019868C /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E22B32284E98B10019868C /* NetworkConfiguration.swift */; };
@@ -36,7 +35,6 @@
 		E7E22B24284E84820019868C /* InjectedWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedWrapper.swift; sourceTree = "<group>"; };
 		E7E22B27284E85F00019868C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E7E22B29284E86330019868C /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		E7E22B2B284E86530019868C /* ParseJsonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJsonService.swift; sourceTree = "<group>"; };
 		E7E22B2D284E86760019868C /* Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		E7E22B30284E8A0A0019868C /* Url+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Url+Ext.swift"; sourceTree = "<group>"; };
 		E7E22B32284E98B10019868C /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 			children = (
 				E7E22B27284E85F00019868C /* NetworkService.swift */,
 				E7E22B29284E86330019868C /* DataService.swift */,
-				E7E22B2B284E86530019868C /* ParseJsonService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -225,7 +222,6 @@
 				E7E22B10284D121A0019868C /* ContentView.swift in Sources */,
 				E7E22B0E284D121A0019868C /* OfflineApp.swift in Sources */,
 				E7E22B21284D14B10019868C /* MainViewModel.swift in Sources */,
-				E7E22B2C284E86530019868C /* ParseJsonService.swift in Sources */,
 				E7E22B25284E84820019868C /* InjectedWrapper.swift in Sources */,
 				E7E22B28284E85F00019868C /* NetworkService.swift in Sources */,
 				E7E22B2E284E86760019868C /* Configurator.swift in Sources */,
