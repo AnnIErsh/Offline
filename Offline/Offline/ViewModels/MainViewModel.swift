@@ -9,8 +9,8 @@ import Foundation
 
 final class MainViewModel: ObservableObject {
     @Injected var network: NetworkService?
-    @Injected var data: DataService?
     @Published var saved: NewsList?
+    
     let path: String = "everything?q=tesla"
     
     var url: URL {

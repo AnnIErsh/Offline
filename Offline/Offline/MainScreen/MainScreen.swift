@@ -8,18 +8,22 @@
 import SwiftUI
 
 struct MainScreen: View {
-    @ObservedObject var model = MainViewModel()
+    @ObservedObject var mainModel = MainViewModel()
+    @ObservedObject var newsModel = NewsViewModel()
     
     var body: some View {
         VStack {
             Button("Load News") {
-                model.clealData()
-                model.fetchRequest()
+                mainModel.clealData()
+                mainModel.fetchRequest()
             }
             List {
-                ForEach(model.saved?.articles ?? []) { i in
+                ForEach(mainModel.saved?.articles ?? []) { i in
                     Text("\(i.title)")
                 }
+            }
+            Button("Add News") {
+                newsModel.addNews(newData: mainModel.saved!)
             }
         }
         .padding()
