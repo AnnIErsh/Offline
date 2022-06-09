@@ -27,6 +27,7 @@
 		E7E7AC35285257CF0071B421 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7AC34285257CF0071B421 /* NewsViewModel.swift */; };
 		E7E7AC39285277FE0071B421 /* ModelNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7AC38285277FE0071B421 /* ModelNames.swift */; };
 		E7E8FC4A2852890100DC257C /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8FC492852890100DC257C /* DetailScreen.swift */; };
+		E7E8FC4C285295F700DC257C /* NewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E8FC4B285295F700DC257C /* NewsList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		E7E7AC34285257CF0071B421 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		E7E7AC38285277FE0071B421 /* ModelNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelNames.swift; sourceTree = "<group>"; };
 		E7E8FC492852890100DC257C /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
+		E7E8FC4B285295F700DC257C /* NewsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				E7E22B34284EA00C0019868C /* NewsItem.swift */,
 				E7E22B32284E98B10019868C /* NetworkConfiguration.swift */,
 				E7E7AC38285277FE0071B421 /* ModelNames.swift */,
+				E7E8FC4B285295F700DC257C /* NewsList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				E7E22B1E284D12CE0019868C /* MainScreen.swift in Sources */,
 				E7E22B31284E8A0A0019868C /* Url+Ext.swift in Sources */,
 				E7E22B23284E82610019868C /* ServiceLocator.swift in Sources */,
+				E7E8FC4C285295F700DC257C /* NewsList.swift in Sources */,
 				E7E22B35284EA00C0019868C /* NewsItem.swift in Sources */,
 				E7E22B10284D121A0019868C /* ContentView.swift in Sources */,
 				E7E22B0E284D121A0019868C /* OfflineApp.swift in Sources */,

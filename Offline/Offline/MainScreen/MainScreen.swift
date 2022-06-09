@@ -13,17 +13,26 @@ struct MainScreen: View {
     
     var body: some View {
         VStack {
-            Button("Load News") {
-                mainModel.clealData()
-                mainModel.fetchRequest()
+            HStack {
+                Button("Load Tesla News") {
+                    mainModel.clealData()
+                    mainModel.fetchRequest()
+                }
+                Spacer()
+                Button("Load Apple News") {
+                    mainModel.clealData()
+                    mainModel.path = "everything?q=apple"
+                    mainModel.fetchRequest()
+                }
+        
             }
             List {
                 ForEach(mainModel.saved?.articles ?? []) { i in
                     Text("\(i.title)")
                 }
             }
-            Button("Add News") {
-                newsModel.addNews(newData: mainModel.saved!)
+            Button("Save") {
+                newsModel.addNews(newData: mainModel.saved)
             }
         }
         .padding()

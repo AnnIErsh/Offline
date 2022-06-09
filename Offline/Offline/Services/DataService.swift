@@ -8,7 +8,13 @@
 import Foundation
 import CoreData
 
-class DataService {
+protocol IDataService {
+    func encodeData<T: Codable>(type: T.Type, withData data: T?) -> Data?
+    func decodeData<T: Codable>(type: T.Type, withData data: Data?) -> T?
+    func saveData()
+}
+
+class DataService: IDataService {
     var context: NSManagedObjectContext?
     
     private var container: NSPersistentContainer = {

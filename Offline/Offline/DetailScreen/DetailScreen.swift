@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct DetailScreen: View {
-    @EnvironmentObject var newsModel: NewsViewModel
-    
+    @EnvironmentObject var newsViewModel: NewsViewModel
+
     var body: some View {
         VStack {
             List {
-                ForEach(newsModel.saved?.articles ?? []) { i in
+                ForEach(newsViewModel.saved?.articles ?? []) { i in
                     Text("\(i.title)")
                 }
             }
-            Button("Clear Data") {
-                newsModel.clearCoreData()
+            .onAppear {
+                newsViewModel.getNews()
             }
         }
         .padding()

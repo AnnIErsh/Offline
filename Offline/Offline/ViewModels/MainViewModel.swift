@@ -11,7 +11,7 @@ final class MainViewModel: ObservableObject {
     @Injected var network: NetworkService?
     @Published var saved: NewsList?
     
-    let path: String = "everything?q=tesla"
+    var path: String = "everything?q=tesla"
     
     var url: URL {
         URL(stringLiteral: "\(NetworkConfiguration.getBaseUrl())\(path)")

@@ -24,14 +24,5 @@ struct NewsItem: Codable, Identifiable {
     }
 }
 
-struct NewsList: Codable {
-    
-    let articles: [NewsItem]
-    
-    enum CodingKeys: String, CodingKey {
-        case articles
-    }
-}
-
 
 
