@@ -66,12 +66,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E7E22B01284D121A0019868C = {
+		E72CB9452852B0FE0057E0EB /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
 				E7C3223028501A28000769B4 /* News+CoreDataClass.swift */,
 				E7C3223128501A28000769B4 /* News+CoreDataProperties.swift */,
 				E7C3222D28501393000769B4 /* Model.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		E7E22B01284D121A0019868C = {
+			isa = PBXGroup;
+			children = (
+				E72CB9452852B0FE0057E0EB /* CoreData */,
 				E7E22B0C284D121A0019868C /* Offline */,
 				E7E22B0B284D121A0019868C /* Products */,
 			);

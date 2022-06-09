@@ -16,6 +16,7 @@ struct MainScreen: View {
             HStack {
                 Button("Load Tesla News") {
                     mainModel.clealData()
+                    mainModel.path = "everything?q=tesla"
                     mainModel.fetchRequest()
                 }
                 Spacer()
